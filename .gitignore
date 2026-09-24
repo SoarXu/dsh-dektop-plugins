@@ -1,0 +1,15 @@
+node_modules/
+test/
+release/
+docs/plans/
+coverage/
+
+.env
+.env.*
+!.env.example
+
+*.log
+*.tgz
+*.zip
+.DS_Store
+Thumbs.db

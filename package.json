@@ -1,0 +1,45 @@
+{
+  "name": "dsh-enterprise-auth",
+  "version": "0.0.2",
+  "description": "Enterprise authentication prototype for DSH Desktop",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./enterprise-llm": "./enterprise-llm.js",
+    "./client": "./client.js",
+    "./auth-state": "./auth-state.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "auth-state.js",
+    "secure-store.js",
+    "cordis.patch.yml",
+    "enterprise-llm.js",
+    "README.md",
+    "INSTALL.zh-CN.md",
+    "docs/identity-bridge.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "migrate-model": "node migrate-enterprise-model.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-primitives"
+      ]
+    }
+  },
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^5.4.2"
+  }
+}
