@@ -1,6 +1,6 @@
 {
   "name": "dsh-enterprise-auth",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Enterprise authentication prototype for DSH Desktop",
   "type": "module",
   "main": "index.js",

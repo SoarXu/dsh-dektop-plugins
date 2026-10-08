@@ -2,7 +2,7 @@
 
 This plugin provides the DSH Desktop enterprise account control. The user enters an account and password; the configured external identity service authenticates them and returns its original JWT. The DSH management backend validates that JWT, resolves its signed account and work ID against LDAP, and applies the existing model authorization assigned to the resulting AD `objectGUID`. Desktop authentication does not require the account to be synchronized into the management-admin user list.
 
-The account control is registered in the official `sidebar.footer.action` slot, immediately above Settings. It offers Login, display name, and Logout. Configure the management backend with `DSH_MANAGEMENT_API` (default `http://10.56.0.242:8080`) and the identity provider with `DSH_IDENTITY_API` (default `http://10.56.0.190:7263`). The plugin calls:
+The account control is registered in the official `sidebar.footer.action` slot, immediately above Settings. It offers Login, display name, and Logout. The packaged management backend defaults to `http://10.56.1.90:32000`; administrators can override it with `DSH_MANAGEMENT_API` when moving the service. The identity provider defaults to `http://10.56.0.190:7263` and can be overridden with `DSH_IDENTITY_API`. The plugin calls:
 
 - `POST {DSH_IDENTITY_API}/api/Login/` for identity authentication
 - `GET /api/desktop/models` for the user's authorized model names

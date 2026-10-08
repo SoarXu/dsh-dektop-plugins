@@ -5,18 +5,18 @@
 - 已安装 DSH Desktop。
 - 电脑能够访问公司内网。
 - 能够访问登录服务 `http://10.56.0.190:7263`。
-- 能够访问 DSH 管理服务 `http://10.56.0.242:8080`。
+- 能够访问 DSH 管理服务 `http://10.56.1.90:32000`。
 - 管理员已为当前域账号分配可用模型。
 
 ## 安装
 
 1. 完全退出 DSH Desktop，包括 Windows 托盘中的 DSH Desktop。
-2. 将 `dsh-enterprise-auth-0.0.2.tgz` 保存到本机，例如 `C:\Temp`。
+2. 将 `dsh-enterprise-auth-0.0.3.tgz` 保存到本机，例如 `C:\Temp`。
 3. 打开 PowerShell，执行：
 
 ```powershell
 $env:DSH_HOME = "$env:APPDATA\dsh-desktop\harness"
-dsh plugin --profile web add "C:\Temp\dsh-enterprise-auth-0.0.2.tgz"
+dsh plugin --profile web add "C:\Temp\dsh-enterprise-auth-0.0.3.tgz"
 ```
 
 4. 命令执行成功后重新启动 DSH Desktop。
@@ -53,7 +53,7 @@ GET /dsh-enterprise-auth/token
 
 - 登录失败：确认公司账号密码正确，并检查是否能访问 `10.56.0.190:7263`。
 - 登录成功但没有企业模型：联系管理员检查该账号的模型授权。
-- 模型请求失败：检查 `10.56.0.242:8080/api/health` 是否可访问，并将报错信息提供给管理员。
+- 模型请求失败：检查 `10.56.1.90:32000/api/health` 是否可访问，并将报错信息提供给管理员。
 
 ## 卸载
 

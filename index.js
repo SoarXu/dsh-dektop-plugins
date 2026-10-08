@@ -2,7 +2,7 @@ const STATUS_PATH = '/dsh-enterprise-auth/status'
 const LOGIN_PATH = '/dsh-enterprise-auth/login'
 const LOGOUT_PATH = '/dsh-enterprise-auth/logout'
 const TOKEN_PATH = '/dsh-enterprise-auth/token'
-const MANAGEMENT_API = process.env.DSH_MANAGEMENT_API || 'http://10.56.0.242:8080'
+const MANAGEMENT_API = process.env.DSH_MANAGEMENT_API || 'http://10.56.1.90:32000'
 const IDENTITY_API = process.env.DSH_IDENTITY_API || 'http://10.56.0.190:7263'
 const MODEL_REFRESH_INTERVAL_MS = 15_000
 import { EnterpriseLlmAdapter, PROVIDER } from './enterprise-llm.js'
